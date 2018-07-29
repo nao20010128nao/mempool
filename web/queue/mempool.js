@@ -18,9 +18,9 @@
 
 var charts;
 var config = [
-    {"name":"BTC",
+    {"name":"ZNY",
      "url":"http://letsminezny.orz.hm/queue/",
-     "symbol":"BTC",
+     "symbol":"ZNY",
      "satPerUnit": 100000000.0,
      "ranges": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 17, 20, 25, 30, 40, 50, 60, 70, 80, 100, 120, 140, 170, 200, 250, 300, 400, 500, 600, 700, 800, 1000, 1200, 1400, 1700, 2000, 2500, 3000, 4000, 5000, 6000, 7000, 8000, 10000 ],
      "show":   [ 0, 1, 2, 5, 9, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37 ],
@@ -418,7 +418,7 @@ function button(timespan) {
 }
 
 function main() {
-    var hashconfig = 1;
+    var hashconfig = 0;
     var hashtimespan = "24h";
     if (location.hash.length > 0) {
         var args = location.hash.substring(1).split(",");
