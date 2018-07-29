@@ -2,8 +2,8 @@
 
 BITCOINCLI="docker exec zenyd bitzeny-cli"
 MEMPOOLHOME=/home/mempool/mempool
-TMPFILE=/tmp/rawdump.txt
-mkdir -p /tmp
+TMPFILE=/dev/shm/mempool-btc/rawdump.txt
+mkdir -p /dev/shm/mempool-btc
 
 cd $MEMPOOLHOME
 rm -f $TMPFILE
