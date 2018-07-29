@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BITCOINCLI=/home/bitcoin/bin/bitcoin-cli
-MEMPOOLHOME=/home/mempool/mempool
+BITCOINCLI=/usr/local/bin/bitzeny-cli
+MEMPOOLHOME=/home/lesmi/mempool
 TMPFILE=/dev/shm/mempool-btc/rawdump.txt
 mkdir -p /dev/shm/mempool-btc
 
