@@ -32,16 +32,13 @@
      main();
   </script>
   <div>
-    <p>
-      This page displays the number and size of the unconfirmed bitcoin transactions, also known as the transactions in the <b>mempool</b>. It gives a real-time view and shows how the mempool evolves over the time.  The transactions are colored by the amount of fee they pay per byte.  The data is generated from my full node and is updated every minute.  Note that in bitcoin there is no global mempool; every node keeps its own set of unconfirmed transactions that it has seen.  The mempool is also cleared when I reboot my node.
-      The idea is based on the retired service bitcoinqueue.com.
-    </p>
-    <p>The data is separated into different fee levels given in satoshi per bytes.  The lowest colored stripe is for transactions that pay the lowest fee.  Higher fee transactions are stacked on top of it.  Since miners prefer high fee transactions, a new block usually only removes the top 1 MB from the queue.  If a colored stripe persists over several hours without getting smaller, this means that transactions paying this amount of fee are not confirmed during this time, because there are higher paying transactions that take precedence.  If a stripe on the bottom chart is much bigger than on the top chart, the transactions are larger than the average.</p>
-
-    <p>You can click on some fee level in the legend to hide all fee levels below that level.  This way you can better see how many transactions are competing with that fee level.</p>
-
-    <p>Note that sizes include the segwit discount.  So for the core chain, a block will always take at most 1 MB from the mempool, even if it is bigger than 1&nbsp;MB, because the lower diagram already shows the size minus three quarter of the witness size.  The segwit discount is also included when computing the fee level for a transaction.  In case a transaction pays exactly the fee that defines the boundary between stripes, it is included in the higher stripe.  Free transactions are not included, even if they make it into the mempool.</p>
-   </div>
+    <p>このサイトは<a href="http://letsminezny.orz.hm/">採掘だよ！全員集合！</a>のBitZenyデーモンのmempool(みんなのトランザクションを置いておく所)の様子を表示しています</p>
+    <p>ここのグラフはsat/Bによって分類されています。一番下の色は低い手数料、一番上の色は高い手数料を示します。大体のマイナーは高い手数料のトランザクションしか取らないので、ブロックが掘れると最大1MB分グラフ上部がえぐれます。</p>
+    <p>送金する際の手数料の目安にして下さい。</p>
+    <p>グラフをクリックすると内訳が見られます。凡例をクリックするとその範囲から上の帯だけ表示します。</p>
+    <p>まさか0手数料送金してないですよね?</p>
+    <p>鯖がギリギリなので運営費下さい。</p>
+　</div>
 
     <div class="centered">
         <p>Donation
@@ -52,7 +49,7 @@
 	</div>
     <div class="centered" style="font-size: 13px; margin: 20px;">
 	Source code on github: <a href="https://github.com/nao20010128nao/mempool">https://github.com/nao20010128nao/mempool</a><br/>
-    © 2016-2018 <a href="https://jochen-hoenicke.de/">Jochen Hoenicke</a>
+    © 2016-2018 <a href="https://jochen-hoenicke.de/">Jochen Hoenicke</a><br />
     © 2018 <a href="https://nao20010128.blogspot.jp/">nao20010128nao</a>
 </div>
 </html>
